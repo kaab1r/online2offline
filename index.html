@@ -13,132 +13,13 @@ canvas{width:350px;height:350px;}
 <body>
   <h1>Get Custom Printed Mobile Back Cover and Cases Online @Rs. 99</h1>
   <img src="https://github.com/kaab1r/online2offline/blob/gh-pages/banner.jpg?raw=true" style="width:100%;"/>
-  <video src="https://github.com/kaab1r/online2offline/blob/gh-pages/itsml.mp4?raw=true" controls autoplay loop></video>
-  <!-- <canvas style="display:none;"></canvas> <canvas></canvas>
-  <script>
-  const vi=document.querySelector("video");
-vi.addEventListener("canplay",function() {
-  const qs=el=>document.querySelector(el);
-  const qsa=el=>document.querySelectorAll(el);
-  const im=qs('img'), canvas=qsa('canvas');
-  const cv=canvas[0];
-  const vi=qs('video');
-  const g=cv.getContext('2d');
-  const cv2=canvas[1];
-  const g2=cv2.getContext('2d');
+  <video src="https://github.com/kaab1r/online2offline/blob/gh-pages/itsml.mp4?raw=true" style="width:100%;" controls autoplay loop></video>
 
-  // pr.innerText=im.naturalWidth+','+im.naturalHeight;
-  let d=1;
-/*  let W=cv2.width=cv.width=im.naturalWidth/d;
-  let H=cv2.height=cv.height=im.naturalHeight/d;
-  document.body.appendChild(cv2);
-  g.drawImage(im,0,0,W,H);
-  console.log(d,W,H);
-  const imd=g.getImageData(0,0,W,H);
-  for(let i=0,x=0,y=0; i<imd.data.length; i+=4,++x) {
-    imd.data[i]=+!(imd.data[i]<128)*255;
-    imd.data[i+1]=+!(imd.data[i+1]<128)*255;
-    imd.data[i+2]=+!(imd.data[i+2]<128)*255;
-  }
-  g2.putImageData(imd,0,0);*/
-
-  let W=cv2.width=cv.width=vi.videoWidth/d;
-  let H=cv2.height=cv.height=vi.videoHeight/d;
-  document.body.appendChild(cv2);
-  function range(min, max) {
-    return (Math.random()*(max-min)+min);
-  }
-  function Vec(s) {
-    this.s=s;
-    this.x=range(this.s,W-this.s*2);
-    this.y=range(this.s,H-this.s*2);
-    this.dx=(Math.random()-0.5)*8;
-    this.dy=(Math.random()-0.5)*8;
-  };
-  Vec.prototype.up=function() {
-    if(this.x<0||this.x+this.s>W)this.dx*=-1;
-    if(this.y<0||this.y+this.s>H)this.dy*=-1;
-    this.x+=this.dx; this.y+=this.dy;
-  };
-  function Sin(min, max, plus) {
-    this.min=min; this.max=max;
-    this.inc=true; this.val=range(this.min,this.max);
-    this.plus=Math.abs(plus);
-    this.up=function(){
-      if(this.inc) {
-        if(this.val>=this.max) this.inc=false;
-        else this.val+=this.plus;
-      } else {
-        if(this.val<=this.min)
-          this.inc=true;
-        else this.val-=this.plus;
-      }
-    };
-  };
-  let size=150;
-  let v=new Vec(size);
-  let v2=new Vec(size);
-  let v3=new Vec(size);
-  let rand=0.05;
-  let sin=new Sin(1,8,rand);
-  let sin2=new Sin(1,8,rand);
-  let sin3=new Sin(1,8,rand);
-
-  let vec=new Vec(size), sin0=new Sin(1,8,0.05);
-  function anim() {
-    g.drawImage(vi,0,0,W,H);
-    let vd=g.getImageData(v.x,v.y,size,size);
-    let vd2=g.getImageData(v2.x,v2.y,size,size);
-    let vd3=g.getImageData(v3.x,v3.y,size,size);
-    for(let i=0; i<vd.data.length; i+=4) {
-      let all=vd.data[i]+vd.data[i+1]+vd.data[i+2];
-      all/=sin.val;
-      vd.data[i]=all;
-      vd.data[i+1]=all;
-      vd.data[i+2]=all;
-    }
-    for(let i=0; i<vd2.data.length; i+=4) {
-      vd2.data[i]^=255/sin2.val;
-      vd2.data[i+1]^=255/sin2.val;
-      vd2.data[i+2]^=255/sin2.val;
-    }
-    for(let i=0; i<vd3.data.length; i+=4) {
-      let all=vd3.data[i]+vd3.data[i+1]+vd3.data[i+2];
-      all/=sin3.val;
-      vd3.data[i]=all;
-      vd3.data[i+1]=all;
-      vd3.data[i+2]=all;
-
-      vd3.data[i]^=255/sin3.val;
-      vd3.data[i+1]^=255/sin3.val;
-      vd3.data[i+2]^=255/sin3.val;
-    }
-    g2.drawImage(vi,0,0,W,H);
-    g2.putImageData(vd,v.x,v.y);
-    g2.putImageData(vd2,v2.x,v2.y);
-    g2.putImageData(vd3,v3.x,v3.y);
-    sin.up(); sin2.up(); sin3.up();
-    v.up(); v2.up(); v3.up();
-
-    let data2=g.getImageData(vec.x,vec.y,vec.s,vec.s);
-    for(let i=0; i<data2.data.length; i+=4) {
-      data2.data[i]=+!(data2.data[i]<128)*255;
-      data2.data[i+1]=+!(data2.data[i+1]<128)*255;
-      data2.data[i+2]=+!(data2.data[i+2]<128)*255;
-    }
-    g2.putImageData(data2, vec.x,vec.y);
-    sin0.up(); vec.up();
-    vi.paused||requestAnimationFrame(anim);
-  }
-  vi.onplay=function(){anim();};
-});
+      
 
 
 
 
 
-
-
-  </script>-->
 </body>
 </html>
